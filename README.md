@@ -199,8 +199,11 @@ source("OptimizerEffect.R")
 Expected Console Output:
 
 ===== Disentangling optimizer effect =====
+
 Mean MSE (ZIPXG): 2.2594
+
 Mean MSE (ZINB): 3.0171
+
 Difference (ZINB - ZIPXG): 0.7577
 
 #####  3.6 Multiple-Start Diagnostic (Section 4.2.3)
@@ -301,8 +304,12 @@ install.packages("countreg", repos = "https://R-Forge.R-project.org")
 If you use this code in your research, please cite:
 
 @article{asar2026zipxg,
+
   title={A New Zero Inflated Poisson XGamma Distribution and its Regression Model: Estimation, Simulation and Application},
+  
   author={Asar, Yasin and Tanış, Caner},
+  
   journal={The Journal of Supercomputing},
+  
   year={2026}
 }
