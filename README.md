@@ -135,7 +135,7 @@ Full session information is provided in session_info.txt
 
 ### Reproducing the Results
 
-## Step 1: Clone the Repository
+#### Step 1: Clone the Repository
 
 ```r
 git clone https://github.com/yasinasar/ZIPXG.git
@@ -143,7 +143,7 @@ cd ZIPXG
 ```
 
 
-## Step 2: Install Required Packages
+#### Step 2: Install Required Packages
 
 ```r
 install.packages(c("MASS", "pscl", "doParallel", "foreach", "GA", 
@@ -190,7 +190,6 @@ source("SensitivityAnalysis.R")
 ```
 
 Output: Table 14
-
 
 
 ## 3.5 Optimizer Effect (Section 4.2.2)
