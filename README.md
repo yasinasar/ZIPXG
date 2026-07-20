@@ -1,6 +1,6 @@
 # ZIPXG: Zero Inflated Poisson XGamma Regression Model
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21452901.svg)](https://doi.org/10.5281/zenodo.21452901)
 
 This repository contains the complete R code for the paper:
 
@@ -315,3 +315,7 @@ If you use this code in your research, please cite:
   
   year={2026}
 }
+
+This version of the code is permanently archived on Zenodo:
+
+https://zenodo.org/badge/DOI/10.5281/zenodo.21452901.svg
