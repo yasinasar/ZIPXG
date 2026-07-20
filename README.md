@@ -20,25 +20,38 @@ The methodology employs a hybrid GA+BFGS optimization strategy to handle the non
 
 ## Repository Structure
 ZIPXG/
-├── README.md # This file
-├── session_info.txt # R session information for reproducibility
-├── LICENSE # MIT License
-│
-├── multiple_start_diagnostic_results.csv # Results from convergence diagnostics
-├── scenario_C_ZINB_results.csv # Results from misspecification simulation
-│
-├── sim4_1.R # Simulation for ZIPXG distribution (Section 4.1)
-├── sim4_2.R # Main simulation for regression model (Section 4.2)
-├── sim4_2_dgp_zinb.R # Misspecification scenario (Scenario C)
-├── AffairsDataAnalysis.R # Affairs data analysis (Section 5)
-├── VuongTests_Rootograms.R # Vuong tests and rootograms
-├── SensitivityAnalysis.R # GA hyperparameter sensitivity analysis
-├── OptimizerEffect.R # Disentangling optimizer effect
-├── multiple_start_diagnostic.R # Global convergence diagnostics (Section 4.2.3)
-├── benchmark.R # Parallel performance benchmarking
-├── timings.R # Model fitting timings
-└── test_likelihood.R # Unit test for numerical stability
 
+├── README.md # This file
+
+├── session_info.txt # R session information for reproducibility
+
+├── LICENSE # MIT License
+
+├── multiple_start_diagnostic_results.csv # Results from convergence diagnostics
+
+├── scenario_C_ZINB_results.csv # Results from misspecification simulation
+
+├── sim4_1.R # Simulation for ZIPXG distribution (Section 4.1)
+
+├── sim4_2.R # Main simulation for regression model (Section 4.2)
+
+├── sim4_2_dgp_zinb.R # Misspecification scenario (Scenario C)
+
+├── AffairsDataAnalysis.R # Affairs data analysis (Section 5)
+
+├── VuongTests_Rootograms.R # Vuong tests and rootograms
+
+├── SensitivityAnalysis.R # GA hyperparameter sensitivity analysis
+
+├── OptimizerEffect.R # Disentangling optimizer effect
+
+├── multiple_start_diagnostic.R # Global convergence diagnostics (Section 4.2.3)
+
+├── benchmark.R # Parallel performance benchmarking
+
+├── timings.R # Model fitting timings
+
+└── test_likelihood.R # Unit test for numerical stability
 
 ---
 
@@ -121,4 +134,8 @@ other attached packages:
 Full session information is provided in session_info.txt
 
 ### Reproducing the Results
- 
+
+## Step 1: Clone the Repository
+
+git clone https://github.com/yasinasar/ZIPXG.git
+cd ZIPXG
