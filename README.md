@@ -153,9 +153,9 @@ install.packages(c("MASS", "pscl", "doParallel", "foreach", "GA",
 install.packages("countreg", repos = "https://R-Forge.R-project.org")
 ```
 
-## Step 3: Run Analyses
+#### Step 3: Run Analyses
 
-# 3.1 Simulation for ZIPXG Distribution (Section 4.1)
+##### 3.1 Simulation for ZIPXG Distribution (Section 4.1)
 
 ```r
 source("sim4_1.R")
@@ -163,9 +163,9 @@ source("sim4_1.R")
 
 Output: ZIPX_Simulation_Grid.pdf (Figure 1)
 
-## 3.2 Main Simulation for Regression Model (Section 4.2)
+#####  3.2 Main Simulation for Regression Model (Section 4.2)
 
-# Scenario A and B:
+Scenario A and B:
 
 ```r
 source("sim4_2.R")
