@@ -141,3 +141,171 @@ Full session information is provided in session_info.txt
 git clone https://github.com/yasinasar/ZIPXG.git
 cd ZIPXG
 ```
+
+
+## Step 2: Install Required Packages
+
+```r
+install.packages(c("MASS", "pscl", "doParallel", "foreach", "GA", 
+                   "numDeriv", "knitr", "kableExtra", "dplyr", 
+                   "ggplot2", "gridExtra", "AER", "glmmTMB"))
+# Optional for rootograms:
+install.packages("countreg", repos = "https://R-Forge.R-project.org")
+```
+
+## Step 3: Run Analyses
+
+# 3.1 Simulation for ZIPXG Distribution (Section 4.1)
+
+```r
+source("sim4_1.R")
+```
+
+Output: ZIPX_Simulation_Grid.pdf (Figure 1)
+
+## 3.2 Main Simulation for Regression Model (Section 4.2)
+
+# Scenario A and B:
+
+```r
+source("sim4_2.R")
+```
+
+Output: Tables 3, 4, 14, and 15
+
+## 3.3 Misspecification Scenario (Scenario C)
+
+```r
+source("sim4_2_dgp_zinb.R")
+```
+
+Output: Tables 6 and 19, scenario_C_ZINB_results.csv
+
+
+
+## 3.4 Sensitivity Analysis (Appendix A)
+
+```r
+source("SensitivityAnalysis.R")
+```
+
+Output: Table 14
+
+
+
+## 3.5 Optimizer Effect (Section 4.2.2)
+
+```r
+source("OptimizerEffect.R")
+```
+
+Expected Console Output:
+
+===== Disentangling optimizer effect =====
+Mean MSE (ZIPXG): 2.2594
+Mean MSE (ZINB): 3.0171
+Difference (ZINB - ZIPXG): 0.7577
+
+## 3.6 Multiple-Start Diagnostic (Section 4.2.3)
+
+```r
+source("multiple_start_diagnostic.R")
+```
+
+Outputs:
+
+multiple_start_diagnostic_results.csv
+
+multiple_start_loglik_distribution.pdf (Figure 5)
+
+multiple_start_loglik_distribution.eps
+
+Table 7 printed to console
+
+## 3.7 Parallel Performance Benchmarking (Section 4.2.1)
+
+```r
+source("benchmark.R")
+```
+
+Outputs:
+
+performance_benchmark_results.csv
+
+LaTeX table (speedup and efficiency) printed to console
+
+
+## 3.8 Model Fitting Timings (Appendix C)
+
+```r
+source("timings.R")
+```
+
+Output: Average computational times for each model printed to console.
+
+## 3.9 Affairs Data Analysis (Section 5)
+
+```r
+source("AffairsDataAnalysis.R")
+```
+
+Outputs: Tables 10, 11 and 12 printed to console.
+
+## 3.10 Vuong Tests and Rootograms (Section 5)
+
+```r
+source("VuongTests_Rootograms.R")
+```
+
+Vuong test results (Table 13) printed to console
+
+rootograms_all.eps (Figure 4)
+
+## 3.11 Numerical Stability Unit Test
+
+```r
+source("test_likelihood.R")
+```
+
+Expected Output: ALL TESTS PASSED
+
+
+### Troubleshooting
+
+## Common Issues
+
+# 1. Parallel execution fails on Windowss
+
+Use makeCluster(no_cores, type = "PSOCK") instead of the default, or set no_cores <- 1 for serial execution.
+
+# 2. GA package version mismatch
+
+The code was tested with GA version 3.2.5. If you encounter issues, try:
+
+```r
+install.packages("GA", version = "3.2.5")
+```
+
+# 3. Memory issues with large simulations
+
+Reduce R (number of replications) in sim4_2.R from 10000 to 1000 for testing. Increase available memory or reduce parallel workers.
+
+# 4. Missing countreg package
+
+Rootograms require countreg which may not be available on CRAN. Install from R‑Forge:
+
+```r
+install.packages("countreg", repos = "https://R-Forge.R-project.org")
+```
+
+
+### Citation
+
+If you use this code in your research, please cite:
+
+@article{asar2026zipxg,
+  title={A New Zero Inflated Poisson XGamma Distribution and its Regression Model: Estimation, Simulation and Application},
+  author={Asar, Yasin and Tanış, Caner},
+  journal={The Journal of Supercomputing},
+  year={2026}
+}
