@@ -137,5 +137,7 @@ Full session information is provided in session_info.txt
 
 ## Step 1: Clone the Repository
 
+```r
 git clone https://github.com/yasinasar/ZIPXG.git
 cd ZIPXG
+```
