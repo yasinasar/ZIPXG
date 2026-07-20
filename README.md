@@ -171,7 +171,7 @@ Scenario A and B:
 source("sim4_2.R")
 ```
 
-Output: Tables 3, 4, 14, and 15
+Output: Tables 4, 5, 17, and 18
 
 #####   3.3 Misspecification Scenario (Scenario C)
 
@@ -206,6 +206,7 @@ Mean MSE (ZINB): 3.0171
 
 Difference (ZINB - ZIPXG): 0.7577
 
+
 #####  3.6 Multiple-Start Diagnostic (Section 4.2.3)
 
 ```r
@@ -220,7 +221,8 @@ multiple_start_loglik_distribution.pdf (Figure 2)
 
 multiple_start_loglik_distribution.eps
 
-Table 7 printed to console
+Output: Table 7 
+
 
 #####  3.7 Parallel Performance Benchmarking (Section 4.2.1)
 
@@ -241,7 +243,7 @@ LaTeX table (speedup and efficiency) printed to console
 source("timings.R")
 ```
 
-Output: Average computational times for each model printed to console.
+Output: Average computational times for each model printed to console (Table 16)
 
 #####   3.9 Affairs Data Analysis (Section 5)
 
